@@ -1,17 +1,136 @@
 :root {
---Green-500: hsl(158, 36%, 37%);
---Green-700: hsl(158, 42%, 18%);
---Black: hsl(212, 21%, 14%);
---Grey: hsl(228, 12%, 48%);
---Cream: hsl(30, 38%, 92%);
---White: hsl(0, 0%, 100%);
+  --Green-500: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
 }
 
 body {
-    height: 100vh;
-    background-color: var(--Cream);
+  height: 100vh;
+  max-width: 100%;
+  padding: 2em;
+  background-color: var(--Cream);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.card {
+  height: fit-content;
+  border-radius: 1em;
+  display: grid;
+  grid-template-areas:
+    "image"
+    "content";
+  grid-template-columns: 1fr;
+  background-color: var(--White);
+}
+
+.card .desktop {
+  display: none;
+}
+
+.card .mobile {
+  width: 100%;
+  display: block;
+  grid-area: image;
+  border-radius: 1em 1em 0 0;
+}
+
+.card .product-info {
+  grid-area: content;
+  padding: 1em;
+}
+
+.mobile {
+  display: none;
+}
+
+.category {
+  color: var(--Grey);
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+.product-title {
+  font-weight: bolder;
+  font-size: 3em;
+  color: var(--Black);
+}
+
+.product-details {
+  color: var(--Grey);
+}
+
+.price-section {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  column-gap: 3em;
+  margin-bottom: 2em;
+}
+
+.discounted-price {
+  color: var(--Green-500);
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.primary-price {
+  text-decoration: line-through;
+  color: var(--Grey);
+}
+
+.add-to-cart {
+  border: none;
+  background-color: var(--Green-500);
+  border-radius: 1em;
+  color: white;
+  display: flex;
+  column-gap: 1em;
+  width: 100%;
+  padding: 0.3em;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+@media (min-width: 27em) {
+  .card {
+    width: 40em;
+    gap: 2em;
+    grid-template-areas: "image content";
+    grid-template-columns: 1fr 2fr;
+  }
+  .card .desktop {
+    display: block;
+    grid-area: image;
+    width: 20em;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    border-radius: 1em 0 0 1em;
+    height: 100%;
+  }
+
+  .card .mobile {
+    display: none;
+  }
+
+  .card .product-info {
+    grid-area: content;
+    padding: 1em;
+  }
+
+  .add-to-cart {
+    width: calc(20em - (2 * 2em));
+  }
+
+  .add-to-cart:hover {
+    background-color: var(--Green-700);
+    cursor: pointer;
+  }
 }

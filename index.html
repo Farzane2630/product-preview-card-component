@@ -9,13 +9,20 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>Frontend Mentor | Product preview card component</title>
   </head>
   <body>
     <main class="card">
       <section class="product-image">
         <img
+          class="desktop"
           src="./assets/images/image-product-desktop.jpg"
+          alt="The perfume on a gray background with two green leaves around."
+        />
+        <img
+          class="mobile"
+          src="./assets/images/image-product-mobile.jpg"
           alt="The perfume on a gray background with two green leaves around."
         />
       </section>
@@ -30,7 +37,7 @@
           <span class="discounted-price">$149.99</span>
           <span class="primary-price">$169.99</span>
         </div>
-        <button class="add-to-card" type="button">
+        <button class="add-to-cart" type="button">
           <img src="./assets/images/icon-cart.svg" alt="cart icon" />
           <p>Add to Cart</p>
         </button>
