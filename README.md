@@ -46,6 +46,10 @@ Users should be able to:
 
 ### Continued development
 
+change h1 and price font size 
+change font family
+
+
 ### Useful resources
 
 ## Author
