@@ -1,6 +1,6 @@
 # Frontend Mentor - Product preview card component solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -44,8 +44,22 @@ Users should be able to:
 
 ### What I learned
 
-### Continued development
+✅ Instead of using two <img> elements and then toggling them using css, you could use the <picture> element, buddy.
 
+✅ The <picture> element is super handy cuz it lets you show different images depending on the screen size or device.
+
+✅ Let's break it down with this example:
+
+```
+<picture>
+  <source srcset="images/image-product-desktop.jpg" media="(min-width: 768px)">
+  <img src="images/image-product-mobile.jpg alt="A beautiful perfume">
+</picture>
+```
+
+✅ This ensure to display the image put in the <source> as long as the page is larger than 768px otherwise it goes to the default path set in the img, which will be for mobile.
+
+### Continued development
 
 ### Useful resources
 
