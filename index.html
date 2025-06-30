@@ -16,8 +16,12 @@
     <main class="card">
       <picture class="product-image">
         <source
-          media="(min-width: 375px)"
+          media="(min-width: 27em)"
           srcset="./assets/images/image-product-desktop.jpg"
+        />
+        <source
+          media="(max-width: 27em)"
+          srcset="./assets/images/image-product-mobile.jpg"
         />
         <img src="./assets/images/image-product-mobile.jpg" alt="Perfume" />
       </picture>
